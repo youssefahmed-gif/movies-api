@@ -20,7 +20,14 @@ async function fetchMovies() {
     console.log(data);
     data.forEach((movie) => {
         container.innerHTML += `
-         <img src="https://image.tmdb.org/t/p/w1280${movie.poster_path}" alt="" width="300" height="400" />
+         <div class="card" style="width: 18rem;">
+  <img src="https://image.tmdb.org/t/p/w1280${movie.poster_path}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
         `;
     }); 
 }
